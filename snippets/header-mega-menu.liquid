@@ -1,0 +1,131 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+
+<nav class="header__inline-menu">
+  <ul class="list-menu list-menu--inline" role="list">
+    {%- for link in section.settings.menu.links -%}
+      <li>
+        {%- if link.links != blank -%}
+          <header-menu>
+            <details id="Details-HeaderMenu-{{ forloop.index }}" class="mega-menu">
+              <summary
+                id="HeaderMenu-{{ link.handle }}"
+                class="header__menu-item list-menu__item link focus-inset"
+              >
+                <span
+                  {%- if link.child_active %}
+                    class="header__active-menu-item"
+                  {% endif %}
+                >
+                  {{- link.title | escape -}}
+                </span>
+                {{- 'icon-caret.svg' | inline_asset_content -}}
+              </summary>
+              <div
+                id="MegaMenu-Content-{{ forloop.index }}"
+                class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
+                tabindex="-1"
+              > 
+              {% comment %}WST Custom {% endcomment %}
+                <div class="wst-mega-menu-content-left">
+                  <h3 class="wst-mega-menu-collection-title">{{ link.title }}</h3>  
+                  <hr class="wst-mega-menu-divider">
+
+                  <ul class="wst-mega-menu-list" role="list">
+                    {%- for childlink in link.links -%}
+                      <li class="wst-mega-menu-item">
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link wst-mega-menu-link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          <span class="wst-mega-menu-link-text">
+                            {{ childlink.title | escape }}
+                          </span>
+
+                          <!-- Arrow image -->
+                          <img 
+                            src="{{ 'wst_icon-arrow.svg' | asset_url }}" 
+                            alt="arrow right"
+                            class="wst-mega-menu-arrow"
+                            aria-hidden="true"
+                          >
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+                <div class="wst-mega-menu-content-right">
+                  <div class="wst-mega-menu-content-right_container">
+                    <img 
+                      src="https://cdn.shopify.com/s/files/1/0975/4568/3232/files/Placeholder_Image_9465170d-df6b-4cc8-a4f9-810a0a0998a8.png?v=1763155711"
+                      alt="Menu Feature"
+                      class="wst-mega-menu-feature-image"
+                    >
+
+                    <div class="wst-mega-menu-cta">
+                      {%- comment -%} Background svgs {%- endcomment -%}
+                      <img
+                        src="{{ 'wst_cta-left.svg' | asset_url }}"
+                        alt=""
+                        class="wst-mega-menu-cta-bg wst-mega-menu-cta-bg--left"
+                        aria-hidden="true"
+                      >
+                      <img
+                        src="{{ 'wst_cta-right.svg' | asset_url }}"
+                        alt=""
+                        class="wst-mega-menu-cta-bg wst-mega-menu-cta-bg--right"
+                        aria-hidden="true"
+                      >
+
+                      {%- comment -%} Clickable CTA content {%- endcomment -%}
+                      <a href="{{ routes.collections_url }}" class="wst-mega-menu-cta-inner">
+                        <span class="wst-mega-menu-cta-text">
+                          PROMO SECTION TITLE
+                        </span>
+
+                        <span class="wst-mega-menu-cta-arrow">
+                          <img
+                            src="{{ 'wst_icon-arrow-white.svg' | asset_url }}"
+                            alt=""
+                            class="wst-mega-menu-cta-arrow-icon"
+                          >
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              {% comment %} End WST Custom {% endcomment %}
+              </div>
+            </details>
+          </header-menu>
+        {%- else -%}
+          <a
+            id="HeaderMenu-{{ link.handle }}"
+            href="{{ link.url }}"
+            class="header__menu-item list-menu__item link link--text focus-inset"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            <span
+              {%- if link.current %}
+                class="header__active-menu-item"
+              {% endif %}
+            >
+              {{- link.title | escape -}}
+            </span>
+          </a>
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>

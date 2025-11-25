@@ -1,0 +1,493 @@
+/* =========================
+   WST Footer Styles — shell only
+   (10px = 1rem base)
+========================= */
+
+/* Root footer */
+.wst-footer {
+  background-color: #141413;
+  color: #fbfaee;
+  padding: 8rem 0;
+}
+/* Main container */
+.wst-footer__container {
+  width: 100%;
+  max-width: 169rem;
+  margin: 0 auto;
+  padding: 0 4.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ===== Brand row ===== */
+
+/* Parent row */
+.wst-footer__brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-height: 80px;
+  gap: 10rem;
+}
+
+/* Title block */
+.wst-footer__brand-title {
+  width: 100%;
+  max-width: 768px;
+}
+
+.wst-footer__brand-heading {
+  font-family: "WST Display";
+  font-size: 5.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  color: #fbfaee;
+  letter-spacing: -0.52px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wst-footer__brand-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+/* Individual logos */
+.wst-footer__brand-logo img {
+  display: block;
+}
+
+.wst-footer__brand-logo .brand-logo_1 {
+  width: 100%;
+  max-width: 145px;
+}
+.wst-footer__brand-logo .brand-logo_2 {
+  width: 100%;
+  max-width: 181px;
+}
+.wst-footer__brand-logo .brand-logo_3 {
+  width: 100%;
+  max-width: 123px;
+}
+
+/* Divider */
+.wst-footer__divider {
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: rgba(251, 250, 238, 0.5);
+  margin: 0;
+  margin-top: 4rem;
+}
+
+/* ===== Main content row ===== */
+
+.wst-footer__content-row {
+  display: flex;
+  gap: 12.8rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+/* Newsletter */
+.wst-footer__newsletter {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.wst-footer__logo-img {
+  display: block;
+  width: 71px;
+  height: auto;
+}
+
+.wst-footer__newsletter-text p {
+  color: #fbfaee;
+  font-family: "NB International Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  margin: 0;
+}
+
+.wst-footer__form-text p {
+  color: var(--Color-WST-WHITE, #fbfaee);
+  /* Text/Tiny/Normal */
+  font-family: "NB International Pro";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+
+.wst-footer__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.wst-footer__form {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.wst-footer__input {
+  flex: 1 1 auto;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.6rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fbfaee;
+}
+
+/* Links */
+
+.wst-footer-link-menu-title {
+  color: var(--Color-WST-WHITE, #fbfaee);
+  /* Heading/H6 */
+  font-family: "WST Display";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.22px;
+  text-transform: uppercase;
+}
+.wst-footer__links {
+  flex: 1 1 60%;
+  display: flex;
+  gap: 4rem;
+  justify-content: flex-end;
+}
+
+.wst-footer__column {
+  flex: 1 1 0;
+}
+
+.wst-footer__column h6 {
+  margin: 0 0 1.6rem;
+  text-transform: uppercase;
+}
+
+.wst-footer__column ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.wst-footer__column li {
+  padding: 8px 0px;
+}
+
+.wst-footer__column a {
+  text-decoration: none;
+  color: #fbfaee;
+  color: var(--Color-WST-WHITE, #fbfaee);
+
+  /* Text/Small/Normal */
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Small, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+/* Social column list */
+.wst-footer-social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wst-footer-social-list li + li {
+  margin-top: 0.8rem; /* spacing between items */
+}
+
+/* Link styling inside social list */
+.wst-footer-social-list a {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem; /* space between icon & text */
+  text-decoration: none;
+  color: #fbfaee;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Icon */
+.wst-footer-social-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* MOBILE ACCORDIANS */
+.wst-footer__accordions {
+  display: none;
+}
+
+/* ACCORDION STYLES */
+.wst-footer-accordion {
+  border-bottom: 1px solid rgba(251, 250, 238, 0.5);
+  padding: 4px 0;
+}
+
+.wst-footer-accordion__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  padding: 12px 0;
+}
+
+.wst-footer-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.wst-footer-accordion__icon {
+  transition: transform 0.25s ease;
+  font-size: 14px;
+}
+
+.wst-footer-accordion__title {
+  color: var(--Color-WST-WHITE, #fbfaee);
+
+  /* Heading/H6 */
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-6, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 25.2px */
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+}
+
+.wst-footer-accordion__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 12px;
+}
+
+.wst-footer-accordion__list > li + li {
+  margin-top: 10px;
+}
+
+.wst-footer-accordion__link {
+  color: var(--Color-WST-WHITE, #fbfaee);
+
+  /* Text/Small/Normal */
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Small, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+  text-decoration: none;
+}
+
+/* ===== Credits ===== */
+
+.wst-footer__credits {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  width: 100%;
+}
+
+.wst-footer__credits-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+  width: 100%;
+}
+
+.wst-footer__credits-text {
+  margin: 0;
+  color: var(--Color-WST-WHITE, #fbfaee);
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Small, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 21px */
+}
+
+.wst-footer__bottom-links {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.wst-footer__bottom-links a {
+  color: #fbfaee;
+  font-family: "Noto Sans", system-ui, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration: underline;
+}
+
+/* =========================
+  Media Queries
+========================= */
+@media (max-width: 1300px) {
+  .wst-footer__brand-logos {
+    gap: 2rem;
+  }
+  .wst-footer__divider {
+    margin: 0;
+  }
+  .wst-footer__credits-row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 989px) {
+  .wst-footer__brand-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    max-height: 100%;
+  }
+
+  .wst-footer__brand-title {
+    max-width: 100%;
+  }
+
+  .wst-footer__brand-logos {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .wst-footer__content-row {
+    flex-direction: column; /* stack newsletter above links */
+    gap: 3.2rem; /* spacing between newsletter and links */
+    align-items: stretch;
+  }
+
+  .wst-footer__newsletter {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Center contents inside columns */
+  .wst-footer__column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center column interior */
+  }
+
+  /* Center social list content too */
+  .wst-footer-social-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 748px) {
+  .wst-footer {
+    padding: 4.8rem 0;
+  }
+  .wst-footer__container {
+    padding: 0 2rem;
+  }
+  .wst-footer__brand-logos {
+    justify-content: space-between;
+  }
+}
+/* @media (max-width: 698px) {
+} */
+@media (max-width: 540px) {
+  .wst-footer__brand-heading {
+    font-size: 40px;
+    letter-spacing: -0.4px;
+    text-align: left;
+  }
+  .wst-footer__brand-logo .brand-logo_1 {
+    width: 100%;
+    max-width: 97px;
+  }
+  .wst-footer__brand-logo .brand-logo_2 {
+    width: 100%;
+    max-width: 122px;
+  }
+  .wst-footer__brand-logo .brand-logo_3 {
+    width: 100%;
+    max-width: 82px;
+  }
+  .wst-footer__newsletter {
+    gap: 2rem;
+  }
+  .wst-footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .wst-footer__brand-logos {
+    gap: 1.6rem;
+  }
+  .wst-footer__bottom-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 1.6rem;
+    /* align-items: ; */
+  }
+  .wst-footer__newsletter-text p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+  .wst-footer__form-text p {
+    font-size: 10px;
+    line-height: 150%; /* 15px */
+  }
+  /* Hide desktop links  */
+  .wst-footer__links {
+    display: none;
+  }
+  /* Display accordians */
+  .wst-footer__accordions {
+    display: block;
+  }
+  p.wst-footer__credits-text {
+    font-size: var(--Text-Sizes-Text-Small, 14px);
+    line-height: 150%;
+  }
+  /* Social links inside footer accordion */
+  .wst-footer-accordion__link {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .wst-footer__divider:last-of-type {
+    display: none;
+  }
+
+  /* Optional hover */
+  .wst-footer-accordion__link:hover {
+    opacity: 0.85;
+  }
+
+  /* Social icons */
+  .wst-footer-accordion__icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}

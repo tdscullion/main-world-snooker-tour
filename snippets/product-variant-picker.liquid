@@ -1,0 +1,57 @@
+{% comment %}
+  Default product variant picker (dropdown only)
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} block info.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
+{%- unless product.has_only_default_variant -%}
+  <variant-selects
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      <div
+        class="product-form__input product-form__input--dropdown"
+        data-index="option{{ forloop.index }}"
+      >
+        <label
+          class="form__label"
+          for="Option-{{ section.id }}-{{ forloop.index0 }}"
+        >
+          {{ option.name }}
+        </label>
+
+        <div class="select">
+          <select
+            id="Option-{{ section.id }}-{{ forloop.index0 }}"
+            class="select__select"
+            name="options[{{ option.name | escape }}]"
+            form="{{ product_form_id }}"
+          >
+            {% render 'product-variant-options',
+              product: product,
+              option: option,
+              block: block,
+              picker_type: 'dropdown'
+            %}
+          </select>
+
+          <span class="svg-wrapper">
+            {{- 'icon-caret.svg' | inline_asset_content -}}
+          </span>
+        </div>
+      </div>
+    {%- endfor -%}
+
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
+  </variant-selects>
+{%- endunless -%}

@@ -1,0 +1,383 @@
+{{ 'wst-footer.css' | asset_url | stylesheet_tag }}
+
+
+{% comment %} <footer class="wst-footer">
+
+  <div class="wst-footer_container"> {% endcomment %}
+
+    <!-- Brand Logos Row -->
+    {% comment %} <div class="wst-footer__brand-logos">
+      <div class="wst-footer__brand-logo-title">
+        <h2 class="wst-footer__brand-logo-title-heading">Our Partners</h2>
+      </div>
+    
+        <div class="wst-footer__brand-logo">
+          <img src="{{ 'wst_halo-footer-logo.png' | asset_url }}" alt="Brand 1" loading="lazy">
+        </div>
+        <div class="wst-footer__brand-logo">
+          <img src="{{ 'wst_johnstones-footer-logo.png' | asset_url }}" alt="Brand 2" loading="lazy">
+        </div>
+        <div class="wst-footer__brand-logo">
+          <img src="{{ 'wst_castore-footer-logo.png' | asset_url }}" alt="Brand 3" loading="lazy">
+        </div>
+      
+    </div> {% endcomment %}
+
+    <!-- Divider -->
+    {% comment %} <hr class="wst-footer__divider"> {% endcomment %}
+
+
+    {% comment %} <div class="wst-footer__bottom-section">
+      <div class="wst-footer__content">
+        <!-- content row -->
+        <div class="wst-footer__newsletter">
+          <div class="wst-footer__logo">
+            <img
+              src="{{ 'wst_logo_red.png' | asset_url }}"
+              alt="WST logo"
+              class="wst-footer__logo-img"
+              loading="lazy"
+              width="71"
+              height="64"
+            >
+          </div>
+          <div class="wst-footer__newsletter-text">
+            <p class="text-regular">Join our newsletter to stay up to date on features and releases.</p>
+          </div>
+          <div class="wst-footer__actions">
+              <div class="wst-footer__form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email"
+                  class="wst-footer__input"
+                />
+
+                <button type="submit" class="wst-btn wst-btn--primary-red">
+                  Subscribe
+                </button>
+              </div>
+
+                <div class="wst-footer__form-text">
+                <p class="text-tiny">By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+              </div>
+              
+          </div>
+        </div>
+
+        <div class="wst-social__links">
+          <div class="wst-footer__column">
+            <h6>Link title</h6>
+            <ul>
+              <li><a href="#">Link one</a></li>
+              <li><a href="#">Link two</a></li>
+              <li><a href="#">Link three</a></li>
+              <li><a href="#">Link four</a></li>
+              <li><a href="#">Link five</a></li>
+            </ul>
+          </div>
+
+          <div class="wst-footer__column">
+            <h6>Link title</h6>
+            <ul>
+              <li><a href="#">Link one</a></li>
+              <li><a href="#">Link two</a></li>
+              <li><a href="#">Link three</a></li>
+              <li><a href="#">Link four</a></li>
+              <li><a href="#">Link five</a></li>
+            </ul>
+          </div>
+
+          <div class="wst-footer__column">
+            <h6>Link title</h6>
+            <ul>
+              <li><a href="#">Link one</a></li>
+              <li><a href="#">Link two</a></li>
+              <li><a href="#">Link three</a></li>
+              <li><a href="#">Link four</a></li>
+              <li><a href="#">Link five</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    <div class="wst-footer__credits"> {% endcomment %}
+        <!-- Divider -->
+        {% comment %} <hr class="wst-footer__divider">
+
+        <div class="wst-footer__credits-content">
+          <p class="wst-footer__credits-text text-small">© {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.E-commerce by FLOW</p>
+
+          <div class="wst-footer__payments">
+            {{ payment_icons }}
+          </div>
+
+          <div class="wst-footer__bottom-links">
+            <a href="/policies/privacy-policy">Privacy Policy</a>
+            <a href="/policies/terms-of-service">Terms of Service</a>
+            <a href="/policies/cookie-policy">Cookies Settings</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> {% endcomment %}
+<footer class="wst-footer">
+  <div class="wst-footer__container">
+    
+    <!-- Brand Logos Row -->
+    <div class="wst-footer__brand-row">
+      <div class="wst-footer__brand-title">
+        <h2 class="wst-footer__brand-heading">Our Partners</h2>
+      </div>
+
+      <div class="wst-footer__brand-logos">
+        <div class="wst-footer__brand-logo">
+          <img class=" brand-logo_1" src="{{ 'wst_halo-footer-logo.png' | asset_url }}" alt="Halo" loading="lazy">
+        </div>
+        <div class="wst-footer__brand-logo">
+          <img class=" brand-logo_2" src="{{ 'wst_johnstones-footer-logo.png' | asset_url }}" alt="Johnstones" loading="lazy">
+        </div>
+        <div class="wst-footer__brand-logo">
+          <img class=" brand-logo_3" src="{{ 'wst_castore-footer-logo.png' | asset_url }}" alt="Castore" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <hr class="wst-footer__divider">
+
+    <!-- Main Content Row -->
+    <div class="wst-footer__content-row">
+
+      <!-- Newsletter block -->
+      <div class="wst-footer__newsletter">
+        <div class="wst-footer__logo">
+          <img
+            src="{{ 'wst_logo_red.png' | asset_url }}"
+            alt="WST logo"
+            class="wst-footer__logo-img"
+            loading="lazy"
+            width="71"
+            height="64"
+          >
+        </div>
+
+        <div class="wst-footer__newsletter-text">
+          <p class="wst-text-regular">
+            Join our newsletter to stay up to date on features and releases.
+          </p>
+        </div>
+
+        <div class="wst-footer__actions">
+          <form class="wst-footer__form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              class="wst-footer__input"
+            >
+            <button type="submit" class="wst-btn wst-btn--primary-red">
+              Subscribe
+            </button>
+          </form>
+
+          <div class="wst-footer__form-text">
+            <p>
+              By subscribing you agree to our Privacy Policy and provide consent to receive updates from our company.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="wst-footer__links">
+
+        <div class="wst-footer__column">
+          <h6 class="wst-footer-link-menu-title">{{ menus.shop.title }}</h6>
+
+          <ul>
+            {% for link in menus.shop.links %}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+         <div class="wst-footer__column">
+          <h6 class="wst-footer-link-menu-title">{{ menus.quick-links.title }}</h6>
+
+          <ul>
+            {% for link in menus.quick-links.links %}
+              <li>
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="wst-footer__column wst-footer__social-column">
+          <h6 class="wst-footer-link-menu-title">Follow us</h6>
+
+          <ul class="wst-footer-social-list">
+
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="{{ 'wst_icon-facebook.svg' | asset_url }}" alt="" class="wst-footer-social-icon">
+                <span>Facebook</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="{{ 'wst_icon-Instagram.svg' | asset_url }}" alt="" class="wst-footer-social-icon">
+                <span>Instagram</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="{{ 'wst_icon-X.svg' | asset_url }}" alt="" class="wst-footer-social-icon">
+                <span>X</span>
+              </a>
+            </li>
+
+             <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener">
+                <img src="{{ 'wst_icon-linkedIn.svg' | asset_url }}" alt="" class="wst-footer-social-icon">
+                <span>Linkedin</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener">
+                <img src="{{ 'wst_icon-youtube.svg' | asset_url }}" alt="" class="wst-footer-social-icon">
+                <span>YouTube</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="wst-footer__accordions">
+
+        <!-- SHOP accordion -->
+        <details class="wst-footer-accordion">
+          <summary class="wst-footer-accordion__summary">
+            <span class="wst-footer-accordion__title">{{ menus.shop.title }}</span>
+            <span class="wst-footer-accordion__icon" aria-hidden="true">
+              <img src="{{ 'wst_icon-add.svg' | asset_url }}" alt="">
+            </span>
+          </summary>
+
+          <ul class="wst-footer-accordion__list">
+            {% for link in menus.shop.links %}
+              <li class="wst-footer-accordion__item">
+                <a href="{{ link.url }}" class="wst-footer-accordion__link">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+
+        <!-- QUICK LINKS accordion -->
+        <details class="wst-footer-accordion">
+          <summary class="wst-footer-accordion__summary">
+            <span class="wst-footer-accordion__title">{{ menus['quick-links'].title }}</span>
+             <span class="wst-footer-accordion__icon" aria-hidden="true">
+              <img src="{{ 'wst_icon-add.svg' | asset_url }}" alt="">
+            </span>
+          </summary>
+
+          <ul class="wst-footer-accordion__list">
+            {% for link in menus['quick-links'].links %}
+              <li class="wst-footer-accordion__item">
+                <a href="{{ link.url }}" class="wst-footer-accordion__link">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+
+        <!-- SOCIALS accordion -->
+        <details class="wst-footer-accordion">
+          <summary class="wst-footer-accordion__summary">
+            <span class="wst-footer-accordion__title">Follow us</span>
+            <span class="wst-footer-accordion__icon" aria-hidden="true">
+              <img src="{{ 'wst_icon-add.svg' | asset_url }}" alt="">
+            </span>
+          </summary>
+
+          <ul class="wst-footer-accordion__list">
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="wst-footer-accordion__link">
+                <img src="{{ 'wst_icon-facebook.svg' | asset_url }}" alt="" class="wst-footer-accordion__icon">
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="wst-footer-accordion__link">
+                <img src="{{ 'wst_icon-Instagram.svg' | asset_url }}" alt="" class="wst-footer-accordion__icon">
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank" rel="noopener" class="wst-footer-accordion__link">
+                <img src="{{ 'wst_icon-X.svg' | asset_url }}" alt="" class="wst-footer-accordion__icon">
+                <span>X</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://youtube.com" target="_blank" rel="noopener" class="wst-footer-accordion__link">
+                <img src="{{ 'wst_icon-youtube.svg'| asset_url }}" alt="" class="wst-footer-accordion__icon">
+                <span>Youtube</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com" target="_blank" rel="noopener" class="wst-footer-accordion__link">
+                <img src="{{ 'wst_icon-linkedIn.svg' | asset_url }}" alt="" class="wst-footer-accordion__icon">
+                <span>Linkedin</span>
+              </a>
+            </li>
+          </ul>
+        </details>
+
+      </div>
+
+
+    </div>
+
+    <!-- Credits -->
+    <div class="wst-footer__credits">
+      <hr class="wst-footer__divider">
+
+      <div class="wst-footer__credits-row">
+        <p class="wst-footer__credits-text text-small">
+          © {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved. E-commerce by FLOW
+        </p>
+
+        <div class="wst-footer__payments">
+          {{ payment_icons }}
+        </div>
+
+        <div class="wst-footer__bottom-links">
+          <a href="/policies/privacy-policy">Privacy Policy</a>
+          <a href="/policies/terms-of-service">Terms of Service</a>
+          <a href="/policies/cookie-policy">Cookies Settings</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+{% schema %}
+{
+  "name": "WST Footer",
+  "class": "section-wst-footer",
+  "settings": [],
+  "blocks": []
+}
+{% endschema %}

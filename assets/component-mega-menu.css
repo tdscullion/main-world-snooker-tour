@@ -1,0 +1,294 @@
+.mega-menu {
+  position: static;
+}
+
+.shopify-section-header-sticky .mega-menu__content {
+  max-height: calc(100vh - var(--header-bottom-position-desktop, 20rem) - 4rem);
+}
+
+.header-wrapper--border-bottom .mega-menu__content {
+  border-top: 0;
+}
+
+.js .mega-menu__content {
+  opacity: 0;
+  transform: translateY(-1.5rem);
+}
+
+.mega-menu[open] .mega-menu__content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mega-menu__list {
+  display: grid;
+  gap: 1.8rem 4rem;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  list-style: none;
+}
+
+/* .mega-menu__link {
+  color: rgba(var(--color-foreground), 0.75);
+  display: block;
+  line-height: calc(1 + 0.3 / var(--font-body-scale));
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  text-decoration: none;
+  transition: text-decoration var(--duration-short) ease;
+  word-wrap: break-word;
+} */
+
+.mega-menu__link--level-2 {
+  font-weight: bold;
+}
+
+.header--top-center .mega-menu__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 0;
+}
+
+.header--top-center .mega-menu__list > li {
+  width: 16%;
+  padding-right: 2.4rem;
+}
+
+.mega-menu__link:hover,
+.mega-menu__link--active {
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+}
+
+.mega-menu__link--active:hover {
+  text-decoration-thickness: 0.2rem;
+}
+
+.mega-menu .mega-menu__list--condensed {
+  display: block;
+}
+
+.mega-menu__list--condensed .mega-menu__link {
+  font-weight: normal;
+}
+
+/* WST Mega Menu Customisations */
+.mega-menu__content {
+  background-color: rgb(var(--color-background));
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  left: 220px;
+  overflow-y: auto;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: flex;
+  width: 863px;
+  min-height: 419px;
+  justify-content: space-between;
+  align-items: stretch; /* stretch children to full height of the row */
+}
+
+/* children as flex items – NO height: 100% here */
+.mega-menu__content > div {
+  flex: 1 1 0;
+}
+
+/* just styling */
+.wst-mega-menu-content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 32px 0 32px 64px;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.wst-mega-menu-collection-title {
+  margin: 0;
+  color: #000;
+  font-family: "WST Pockets";
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 130%;  looks different to figma */
+  line-height: 100%;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+
+.wst-mega-menu-divider {
+  width: 197px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+/* UL container */
+.wst-mega-menu-content-left .wst-mega-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  list-style: none;
+  list-style-type: none;
+  padding: 0;
+  max-width: 197px;
+  width: 100%;
+}
+
+.wst-mega-menu-item {
+  color: #000;
+  font-family: "WST Display";
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.28px;
+  text-transform: uppercase;
+  width: 197px;
+}
+
+/* Make the link fill the li width */
+.wst-mega-menu-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Arrow image */
+.wst-mega-menu-arrow {
+  width: 3.2rem;
+  height: 1rem;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Megamenu right column */
+.wst-mega-menu-content-right {
+  background-color: #141413;
+  padding: 3.2rem 6.4rem;
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.wst-mega-menu-content-right_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  height: 100%;
+}
+
+/* Image */
+.wst-mega-menu-feature-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Outer CTA wrapper under the image */
+.wst-mega-menu-cta {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 72px;
+}
+
+/* Background SVGs (white + red shapes) */
+.wst-mega-menu-cta-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none; /* so clicks go to the <a>, not the images */
+}
+
+/* Left white shape */
+.wst-mega-menu-cta-bg--left {
+  left: 0;
+  width: 260px; /* ⬅️ set to your left SVG width from Figma */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right red shape */
+.wst-mega-menu-cta-bg--right {
+  right: 0;
+  width: 100px; /* ⬅️ set to your right SVG width from Figma */
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Link that sits on top of both SVGs */
+.wst-mega-menu-cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  height: 100%;
+  padding: 0 24px 0 14px;
+  text-decoration: none;
+  color: #000; /* matches white background side */
+  font-family: "WST Display";
+  font-size: 1.4rem; /* tweak to match Figma */
+  text-transform: uppercase;
+}
+
+/* Text sits over the white area */
+.wst-mega-menu-cta-text {
+  white-space: nowrap;
+  color: var(--Color-Scheme-1-Text, #000);
+  /* Heading/H6 */
+  font-family: "WST Display";
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.22px;
+  text-transform: uppercase;
+}
+
+/* Arrow container sits over the red area */
+.wst-mega-menu-cta-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Arrow icon */
+.wst-mega-menu-cta-arrow-icon {
+  width: 3.4rem;
+  height: 2.3rem;
+  object-fit: contain;
+}
+
+/* Optional: hover state – move arrow slightly right */
+.wst-mega-menu-cta-inner:hover .wst-mega-menu-cta-arrow-icon {
+  transform: translateX(3px);
+  transition: transform 150ms ease;
+}
+/* END WST Mega Menu Customisations */
+/* =========================
+  Media Queries
+========================= */
+/* Mobile overrides (10px = 1rem base) */
+@media (max-width: 1800px) {
+  .mega-menu__content {
+    left: 160px;
+  }
+}
+@media (max-width: 1700px) {
+  .mega-menu__content {
+    left: 110px;
+  }
+}

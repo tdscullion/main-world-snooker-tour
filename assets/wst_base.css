@@ -1,0 +1,748 @@
+/* =========================
+=========================
+  WST HELPER CLASSES
+=========================
+========================= */
+
+/* =========================
+  WST BODY TYPE
+========================= */
+
+/* Weights */
+.wst-font-light {
+  font-weight: 300;
+}
+.wst-font-normal {
+  font-weight: 400;
+}
+.wst-font-medium {
+  font-weight: 500;
+}
+.wst-font-semibold {
+  font-weight: 700;
+} /* same as semi bold */
+.wst-font-bold {
+  font-weight: 700;
+}
+.wst-font-extrabold {
+  font-weight: 700;
+}
+
+/* Sizes (10px = 1rem base) */
+.wst-text-large {
+  font-size: 2.2rem; /* 22px */
+  line-height: 150%;
+}
+.wst-text-medium {
+  font-size: 1.8rem; /* 18px */
+  line-height: 150%;
+}
+.wst-text-regular {
+  font-size: 1.6rem; /* 16px */
+  line-height: 150%;
+}
+.wst-text-small {
+  font-size: 1.4rem; /* 14px */
+  line-height: 150%;
+}
+.wst-text-tiny {
+  font-size: 1.2rem; /* 12px */
+  line-height: 150%;
+}
+/* =========================
+  WST COLOR PALETTE
+========================= */
+
+/* ACCENT COLOURS */
+.wst-blue {
+  color: #004eda;
+}
+.wst-pink {
+  color: #ff6bce;
+}
+.wst-brown {
+  color: #bd5835;
+}
+.wst-yellow {
+  color: #ffd237;
+}
+.wst-green {
+  color: #0f965c;
+}
+
+/* Background helpers */
+.bg-wst-blue {
+  background-color: #004eda;
+}
+.bg-wst-pink {
+  background-color: #ff6bce;
+}
+.bg-wst-brown {
+  background-color: #bd5835;
+}
+.bg-wst-yellow {
+  background-color: #ffd237;
+}
+.bg-wst-green {
+  background-color: #0f965c;
+}
+
+/* =========================
+  WST BLACKS
+========================= */
+.wst-black-lightest {
+  color: #e7e7e7;
+}
+.wst-black-lighter {
+  color: #d0d0cf;
+}
+.wst-black-light {
+  color: #5a5a59;
+}
+.wst-black {
+  color: #141413;
+}
+.wst-black-dark {
+  color: #10100f;
+}
+.wst-black-darker {
+  color: #080807;
+}
+.wst-black-darkest {
+  color: #060605;
+}
+
+.bg-wst-black-lightest {
+  background-color: #e7e7e7;
+}
+.bg-wst-black-lighter {
+  background-color: #d0d0cf;
+}
+.bg-wst-black-light {
+  background-color: #5a5a59;
+}
+.bg-wst-black {
+  background-color: #141413;
+}
+.bg-wst-black-dark {
+  background-color: #10100f;
+}
+.bg-wst-black-darker {
+  background-color: #080807;
+}
+.bg-wst-black-darkest {
+  background-color: #060605;
+}
+
+/* =========================
+  WST WHITES
+========================= */
+.wst-white-lightest {
+  color: #fefefd;
+}
+.wst-white-lighter {
+  color: #fefefb;
+}
+.wst-white-light {
+  color: #fcfbf3;
+}
+.wst-white {
+  color: #fbfaee;
+}
+.wst-white-dark {
+  color: #c8c8be;
+}
+.wst-white-darker {
+  color: #64645f;
+}
+.wst-white-darkest {
+  color: #4b4b47;
+}
+
+.bg-wst-white-lightest {
+  background-color: #fefefd;
+}
+.bg-wst-white-lighter {
+  background-color: #fefefb;
+}
+.bg-wst-white-light {
+  background-color: #fcfbf3;
+}
+.bg-wst-white {
+  background-color: #fbfaee;
+}
+.bg-wst-white-dark {
+  background-color: #c8c8be;
+}
+.bg-wst-white-darker {
+  background-color: #64645f;
+}
+.bg-wst-white-darkest {
+  background-color: #4b4b47;
+}
+
+/* =========================
+  WST REDS
+========================= */
+.wst-red-lightest {
+  color: #fde5e9;
+}
+.wst-red-lighter {
+  color: #fcccd4;
+}
+.wst-red-light {
+  color: #f54c69;
+}
+.wst-red {
+  color: #f1002a;
+}
+.wst-red-dark {
+  color: #c00021;
+}
+.wst-red-darker {
+  color: #600010;
+}
+.wst-red-darkest {
+  color: #48000c;
+}
+
+.bg-wst-red-lightest {
+  background-color: #fde5e9;
+}
+.bg-wst-red-lighter {
+  background-color: #fcccd4;
+}
+.bg-wst-red-light {
+  background-color: #f54c69;
+}
+.bg-wst-red {
+  background-color: #f1002a;
+}
+.bg-wst-red-dark {
+  background-color: #c00021;
+}
+.bg-wst-red-darker {
+  background-color: #600010;
+}
+.bg-wst-red-darkest {
+  background-color: #48000c;
+}
+
+/* =========================
+ NEUTRALS
+========================= */
+.wst-neutral-white {
+  color: #ffffff;
+}
+.wst-neutral-lightest {
+  color: #f2f2f2;
+}
+.wst-neutral-lighter {
+  color: #d8d8d8;
+}
+.wst-neutral-light {
+  color: #b2b2b2;
+}
+.wst-neutral {
+  color: #7f7f7f;
+}
+.wst-neutral-dark {
+  color: #4c4c4c;
+}
+.wst-neutral-darker {
+  color: #191919;
+}
+.wst-neutral-darkest {
+  color: #000000;
+}
+
+.wst-bg-neutral-white {
+  background-color: #ffffff;
+}
+.wst-bg-neutral-lightest {
+  background-color: #f2f2f2;
+}
+.wst-bg-neutral-lighter {
+  background-color: #d8d8d8;
+}
+.wst-bg-neutral-light {
+  background-color: #b2b2b2;
+}
+.wst-bg-neutral {
+  background-color: #7f7f7f;
+}
+.wst-bg-neutral-dark {
+  background-color: #4c4c4c;
+}
+.wst-bg-neutral-darker {
+  background-color: #191919;
+}
+.wst-bg-neutral-darkest {
+  background-color: #000000;
+}
+
+/* =========================
+  WST BUTTONS (10px = 1rem base)
+========================= */
+
+/* Button base */
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button span {
+  color: inherit;
+}
+.wst-btn {
+  display: inline-flex;
+  padding: 1rem 2.4rem; /* 10px 24px */
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem; /* 8px */
+  font-size: 1.6rem;
+  border-radius: 0.6rem; /* 6px */
+}
+
+/* Primary Button - Red */
+.wst-btn--primary-red {
+  border: 0.1rem solid #f1002a;
+  background: #f1002a;
+  color: #fbfaee;
+}
+
+/* Secondary Button */
+.wst-btn--secondary {
+  border: 0.1rem solid #141413;
+}
+
+/* Tertiary Button */
+/* .wst-btn--tertiary {
+} */
+
+/* Link Style */
+.wst-btn--link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  border-radius: 0.6rem;
+}
+
+/* =========================
+  WST BOX SHADOWS (10px = 1rem base)
+========================= */
+
+/* xxsmall */
+.wst-box-shadow-xxs {
+  box-shadow: 0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.05);
+}
+
+/* xsmall */
+.wst-box-shadow-xs {
+  box-shadow: 0 0.1rem 0.3rem 0 rgba(0, 0, 0, 0.1),
+    0 0.1rem 0.2rem 0 rgba(0, 0, 0, 0.06);
+}
+
+/* small */
+.wst-box-shadow-sm {
+  box-shadow: 0 0.4rem 0.8rem -0.2rem rgba(0, 0, 0, 0.1),
+    0 0.2rem 0.4rem -0.2rem rgba(0, 0, 0, 0.06);
+}
+
+/* medium */
+.wst-box-shadow-md {
+  box-shadow: 0 1.2rem 1.6rem -0.4rem rgba(0, 0, 0, 0.08),
+    0 0.4rem 0.6rem -0.2rem rgba(0, 0, 0, 0.03);
+}
+
+/* large */
+.wst-box-shadow-lg {
+  box-shadow: 0 2rem 2.4rem -0.4rem rgba(0, 0, 0, 0.08),
+    0 0.8rem 0.8rem -0.4rem rgba(0, 0, 0, 0.03);
+}
+
+/* xlarge */
+.wst-box-shadow-xl {
+  box-shadow: 0 2.4rem 4.8rem -1.2rem rgba(0, 0, 0, 0.18);
+}
+
+/* xxlarge */
+.wst-box-shadow-xxl {
+  box-shadow: 0 3.2rem 6.4rem -1.2rem rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+  WST BORDER RADIUS (10px = 1rem base)
+========================= */
+
+/* large */
+.wst-border-radius-lg {
+  border-radius: 2.4rem; /* 24px */
+}
+
+/* medium */
+.wst-border-radius-md {
+  border-radius: 1.6rem; /* 16px */
+}
+
+/* small */
+.wst-border-radius-sm {
+  border-radius: 0.8rem; /* 8px */
+}
+
+/* ========================= */
+/* CSS CUSTOMISATIONS */
+/* base.css overrides */
+/* ========================= */
+.announcement-bar,
+.announcement-bar__announcement {
+  color: rgb(var(--color-foreground));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  grid-area: announcements;
+  font-family: "NB International Pro";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 24px */
+  text-transform: uppercase;
+}
+
+.mega-menu__content {
+  border-top: 1px solid #141413;
+}
+
+/* .header__menu-item list-menu__item link link--text focus-inset { */
+.header__menu-item {
+  font-family: "WST Display";
+  color: #141413;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.22px;
+  text-transform: uppercase;
+}
+
+.card__heading .wst-product-card-heading {
+  color: var(--Color-Scheme-1-Text, #000);
+  /* Heading/H6 */
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-6, 22px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.22px;
+  text-transform: uppercase;
+}
+
+/* Drawer base layout */
+.wst-menu-drawer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top block */
+.wst-menu-drawer__top {
+  background-color: #fbfaee;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bottom block */
+.wst-menu-drawer__bottom {
+  background-color: #141413;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bottom Image container*/
+.wst-menu-drawer__bottom-content {
+  background-color: #141413;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center horizontally */
+  align-self: stretch;
+}
+
+.wst-menu-drawer__top-inner {
+  padding: 16px 20px 40px 20px;
+}
+
+/* Remove bullets + reset list layout */
+.wst-menu-drawer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove underline from links */
+.wst-menu-drawer__link {
+  text-decoration: none;
+}
+
+.wst-menu-drawer__account-link,
+.wst-menu-drawer__cart-link {
+  display: block; /* puts them on their own line */
+  width: 100%; /* optional but makes it clean */
+  color: inherit;
+  text-decoration: none;
+}
+
+.wst-menu-drawer__account-link,
+.wst-menu-drawer__cart-link {
+  color: #141413; /* or whatever the top section uses */
+  text-decoration: none;
+}
+
+/* All drawer links */
+.wst-menu-drawer__link,
+.wst-menu-drawer__account-link,
+.wst-menu-drawer__cart-link {
+  color: #000;
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-4, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 31.2px */
+  letter-spacing: -0.24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block; /* puts each on its own line */
+}
+/* BUY BUTTON OVERWRITE */
+.shopify-payment-button__button--unbranded {
+  font-size: 0 !important;
+  background: #fbfaee !important;
+  color: #141413 !important;
+}
+
+.shopify-payment-button__button--unbranded::before {
+  content: "Buy Now";
+  position: absolute;
+  visibility: visible;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  font-size: 14px;
+  display: contents;
+  font-family: "NB International Pro";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 24px */
+}
+
+.product-form__submit {
+  color: #fbfaee;
+  background-color: #f1002a;
+}
+
+button.shopify-payment-button__button--unbranded {
+  border: 1px solid #141413 !important;
+}
+/* END BUY BUTTON OVERWRITE */
+.product__title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.product__main-title {
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-3, 44px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 52.8px */
+  letter-spacing: -0.44px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.product__price-inline {
+  font-family: "WST Display"; /* match your brand */
+  font-size: 4.4rem; /* adjust as you like */
+  font-weight: 400;
+  color: #000;
+}
+
+.card__heading {
+  font-size: 22px;
+  line-height: 140%;
+  text-transform: uppercase;
+}
+
+.card-information .card-price {
+  color: var(--Color-Scheme-1-Text, #000);
+  /* Heading/H6 */
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-6, 22px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 30.8px */
+  letter-spacing: -0.22px;
+  text-transform: uppercase;
+}
+
+/* =========================
+  Media Queries
+========================= */
+/* Mobile overrides (10px = 1rem base) */
+@media (max-width: 1800px) {
+  .mega-menu__content {
+    left: 160px;
+  }
+}
+@media (max-width: 1700px) {
+  .mega-menu__content {
+    left: 110px;
+  }
+}
+@media (max-width: 1400px) {
+  .product-media.media.media--transparent {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 989px) {
+  .header__icon.header__icon--search {
+    display: none;
+  }
+  .product__title-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  .product__main-title {
+    font-size: 32px;
+    font-style: normal;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -0.32px;
+  }
+  .product__price-inline {
+    font-size: 32px;
+    line-height: 120%; /* 38.4px */
+    letter-spacing: -0.32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card__heading {
+    font-size: var(--Text-Sizes-Heading-6, 22px);
+    line-height: 140%; /* 30.8px */
+    letter-spacing: -0.22px;
+  }
+  .header__icon .svg-wrapper {
+    width: 24px;
+    height: 24px;
+  }
+  /* Control for slideshow */
+  .slider-buttons {
+    display: none !important;
+  }
+}
+
+/* WST mobile PDP gallery – base styles */
+.wst-mobile-gallery-wrapper {
+  display: none; /* hidden by default (desktop) */
+  width: 100%;
+}
+
+.wst-mobile-gallery {
+  width: 100%;
+}
+
+.wst-mobile-gallery__slide {
+  width: 100%;
+}
+
+.wst-mobile-gallery__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* MOBILE: hide product thumbnails */
+@media screen and (max-width: 749px) {
+  .product .thumbnail-slider,
+  .product .thumbnail-list,
+  .product .thumbnail-slider--vertical,
+  .product .thumbnail-slider__container {
+    display: none !important;
+  }
+}
+
+/* MOBILE: hide Dawn's default product media */
+@media screen and (max-width: 749px) {
+  .product__media-wrapper {
+    display: none;
+  }
+}
+
+/* Show our Flickity gallery only on mobile for now */
+@media screen and (max-width: 749px) {
+  .wst-mobile-gallery-wrapper {
+    display: block;
+  }
+  .wst-mobile-gallery__slide {
+    /* align-self: stretch in flex terms */
+    border-radius: 16px; /* var(--Radius-Medium, 16px) */
+    overflow: hidden; /* keep corners clean when image overflows */
+  }
+  .wst-mobile-gallery__image {
+    object-fit: cover; /* fills the card nicely */
+    display: block;
+  }
+  p.announcement-bar__message {
+    color: var(--Color-White, #fff);
+    font-family: "NB International Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 21px */
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 425px) {
+  h2.accordion__title {
+    font-size: 22px;
+    line-height: 140%; /* 30.8px */
+    letter-spacing: -0.22px;
+    text-transform: uppercase;
+  }
+  .accordion__content p,
+  .product__description p {
+    /* Text/Regular/Normal */
+    font-family: "NB International Pro";
+    font-size: 12px;
+    line-height: 150%; /* 18px */
+  }
+  .product-form__submit {
+    font-family: "NB International Pro";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%; /* 18px */
+  }
+
+  .shopify-payment-button__button--unbranded::before {
+    font-family: "NB International Pro";
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 150%; /* 18px */
+  }
+}

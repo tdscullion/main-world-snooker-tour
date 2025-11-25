@@ -1,0 +1,193 @@
+<div class="wst-product-subscriber-card">
+  <img
+    src="{{ 'wst_3d-triangle-red.png' | asset_url }}"
+    alt=""
+    class="wst-product-subscriber-card__bg"
+    aria-hidden="true"
+  >
+
+  <div class="wst-product-subscriber-card__content">
+    <h4 class="wst-product-subscriber-card__title">
+      Create an account for latest Drops
+    </h4>
+
+    <p class="wst-product-subscriber-card__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </p>
+  </div>
+
+  <div class="wst-product-subscriber-card__form-container">
+    {% form 'customer', id: 'wst-product-subscriber-form-{{ section.id }}', class: 'wst-product-subscriber-card__form-row' %}
+      <input
+        type="email"
+        name="contact[email]"
+        placeholder="Enter your email"
+        class="wst-product-subscriber-card__input"
+        value="{{ form.email }}"
+        aria-required="true"
+        required
+      >
+
+      <input type="hidden" name="contact[tags]" value="newsletter">
+
+      <button type="submit" class="wst-btn wst-btn--primary-red wst-product-subscriber-card__input_cta">
+        Sign Up
+      </button>
+    {% endform %}
+
+    <p class="wst-product-subscriber-card__form-text">
+      By clicking Sign Up you're confirming that you agree with our
+      <span class="wst-product-subscriber-card__form-text-span">Terms and Conditions.</span>
+    </p>
+  </div>
+</div>
+
+{% stylesheet %}
+.wst-product-subscriber-card {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+  border-radius: var(--Radius-Medium, 16px);
+  border: 1px solid var(--Color-Scheme-1-Border, rgba(0, 0, 0, 0.15));
+  background: var(--Color-WST-BLACK, #141413);
+  position: relative;
+  overflow: hidden;
+}
+.wst-product-subscriber-card__bg {
+  position: absolute;
+  right: -66px;
+  top: -73px;
+  width: 367px;
+  height: 216px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.wst-product-subscriber-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+  z-index: 1;
+}
+
+.wst-product-subscriber-card__title {
+  color: var(--Color-Scheme-1-Background, #FBFAEE);
+/* Heading/H4 */
+  font-family: "WST Display";
+  font-size: var(--Text-Sizes-Heading-4, 36px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 46.8px */
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+  margin: 0;
+
+}
+
+p.wst-product-subscriber-card__text {
+  color: var(--Color-Scheme-1-Background, #FBFAEE);
+  /* Text/Medium/Normal */
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Medium, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin: 0;
+}
+
+.wst-product-subscriber-card__form-container {
+  display: flex;
+  width: 100%;
+  max-width: 513px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.wst-product-subscriber-card__form-row {
+  display: flex;
+align-items: flex-start;
+gap: 16px;
+align-self: stretch;
+}
+
+.wst-product-subscriber-card__input {
+  color:  #FBFAEE;
+  display: flex;
+  height: 44px;
+  padding: 8px 12px;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid var(--Opacity-Transparent, rgba(255, 255, 255, 0.00));
+  background: var(--Opacity-White-15, rgba(255, 255, 255, 0.15));
+}
+
+
+
+p.wst-product-subscriber-card__form-text {
+  margin: 0;
+  color: var(--Color-Scheme-1-Background, #FBFAEE);
+  /* Text/Tiny/Normal */
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Tiny, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 18px */
+}
+
+span.wst-product-subscriber-card__form-text-span {
+  color: var(--Color-Scheme-1-Background, #FBFAEE);
+  /* Text/Tiny/Link */
+  font-family: "Noto Sans";
+  font-size: var(--Text-Sizes-Text-Tiny, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+}
+
+@media (max-width: 540px) {
+  .wst-product-subscriber-card__form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .wst-product-subscriber-card__input_cta,
+  .wst-product-subscriber-card__input {
+    width:100%;
+  }
+}
+
+
+@media (max-width: 425px) {
+  p.wst-product-subscriber-card__text {
+    color:  #FBFAEE;
+  /* Text/Medium/Normal */
+  font-family: "NB International Pro";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+  }
+}
+
+
+
+
+
+
+
+{% endstylesheet %}
