@@ -319,9 +319,10 @@
         document.documentElement.classList.add('shopify-design-mode');
       }
     </script>
+   
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="{% if template == 'index' %}is-homepage{% endif %} gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -397,5 +398,26 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  // Only run on homepage
+  if (!document.body.classList.contains('is-homepage')) return;
+
+  const header = document.querySelector('.header-wrapper');
+  if (!header) return;
+
+  function handleScroll() {
+    if (window.scrollY > 20) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  }
+
+  // Run on load + on scroll
+  handleScroll();
+  window.addEventListener('scroll', handleScroll);
+});
+    </script>
   </body>
 </html>

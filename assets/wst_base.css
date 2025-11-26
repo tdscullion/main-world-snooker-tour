@@ -307,6 +307,8 @@ button span {
   gap: 0.8rem; /* 8px */
   font-size: 1.6rem;
   border-radius: 0.6rem; /* 6px */
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Primary Button - Red */
@@ -322,8 +324,11 @@ button span {
 }
 
 /* Tertiary Button */
-/* .wst-btn--tertiary {
-} */
+.wst-btn--tertiary {
+  border: 0.1rem solid #f1002a;
+  background: #f1002a;
+  color: #fbfaee;
+}
 
 /* Link Style */
 .wst-btn--link {
@@ -333,6 +338,13 @@ button span {
   gap: 0.8rem;
 
   border-radius: 0.6rem;
+}
+
+.wst-btn,
+.wst-btn:hover,
+.wst-btn:focus,
+.wst-btn:active {
+  text-decoration: none;
 }
 
 /* =========================
@@ -401,6 +413,96 @@ button span {
 /* CSS CUSTOMISATIONS */
 /* base.css overrides */
 /* ========================= */
+/* Homepage transparent */
+/* HOMEPAGE - initial: transparent header */
+.is-homepage sticky-header.header-wrapper:not(.header--scrolled) {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+/* HOMEPAGE - when scrolled: solid header */
+.is-homepage sticky-header.header-wrapper.header--scrolled {
+  background: #fbfaee !important; /* or use your scheme var */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* Base transition for homepage header */
+.is-homepage sticky-header.header-wrapper {
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* HOMEPAGE – transparent header state: only top row stuff */
+/* HOMEPAGE – transparent header: menu items are light */
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .header__menu-item {
+  color: #fbfaee !important;
+}
+
+/* Keep hover the same light color in transparent state */
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .header__menu-item:hover {
+  color: #fbfaee !important;
+}
+
+/* HOMEPAGE – scrolled: revert to theme default */
+.is-homepage sticky-header.header-wrapper.header--scrolled .header__menu-item {
+  color: rgb(var(--color-foreground)) !important;
+}
+
+.is-homepage .header__menu-item {
+  transition: color 0.3s ease;
+}
+/* Transparent header – make icons light */
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .header__icons
+  svg,
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .header__icons
+  img {
+  filter: invert(1) brightness(2);
+  transition: filter 0.3s ease;
+}
+
+/* Scrolled header – back to normal */
+.is-homepage sticky-header.header-wrapper.header--scrolled .header__icons svg,
+.is-homepage sticky-header.header-wrapper.header--scrolled .header__icons img {
+  filter: none;
+}
+
+/* HOMEPAGE — transparent header (no border) */
+.is-homepage sticky-header.header-wrapper:not(.header--scrolled) {
+  border: none !important;
+}
+
+/* HOMEPAGE — scrolled header (solid background + border) */
+.is-homepage sticky-header.header-wrapper.header--scrolled {
+  border: 1px solid #141413 !important;
+}
+
+/* HOMEPAGE — transparent header */
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .icon.icon-hamburger,
+.is-homepage
+  sticky-header.header-wrapper:not(.header--scrolled)
+  .icon.icon-close {
+  color: #fbfaee !important;
+  fill: #fbfaee !important;
+  stroke: #fbfaee !important;
+}
+
+/* HOMEPAGE — scrolled header */
+.is-homepage sticky-header.header-wrapper.header--scrolled .icon.icon-hamburger,
+.is-homepage sticky-header.header-wrapper.header--scrolled .icon.icon-close {
+  color: rgb(var(--color-foreground)) !important;
+  fill: rgb(var(--color-foreground)) !important;
+  stroke: rgb(var(--color-foreground)) !important;
+}
+/* Announcement bar */
 .announcement-bar,
 .announcement-bar__announcement {
   color: rgb(var(--color-foreground));
@@ -412,7 +514,7 @@ button span {
   align-content: center;
   grid-area: announcements;
   font-family: "NB International Pro";
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 24px */
@@ -710,7 +812,7 @@ button.shopify-payment-button__button--unbranded {
   p.announcement-bar__message {
     color: var(--Color-White, #fff);
     font-family: "NB International Pro";
-    font-size: 14px;
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 21px */
@@ -719,6 +821,9 @@ button.shopify-payment-button__button--unbranded {
 }
 
 @media (max-width: 425px) {
+  p.announcement-bar__message {
+    font-size: 1.2rem;
+  }
   h2.accordion__title {
     font-size: 22px;
     line-height: 140%; /* 30.8px */
@@ -744,5 +849,10 @@ button.shopify-payment-button__button--unbranded {
     font-size: 12px;
     font-weight: 500;
     line-height: 150%; /* 18px */
+  }
+}
+@media (max-width: 385px) {
+  p.announcement-bar__message {
+    font-size: 1rem;
   }
 }

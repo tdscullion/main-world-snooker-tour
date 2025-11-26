@@ -1,0 +1,370 @@
+<section
+  class="wst-hero"
+  {% if section.settings.bg_image %}
+    style="background-image: url('{{ section.settings.bg_image | image_url: width: 2200 }}');"
+  {% endif %}
+>
+  <div class="wst-hero__overlay"></div>
+
+  <div class="wst-hero__container">   
+
+    <div class="wst-hero__inner">
+      <div
+        class="wst-hero__shape"
+      >
+        <div class="wst-hero__content">
+          {% if section.settings.heading != blank %}
+            <h1 class="wst-hero__heading">{{ section.settings.heading }}</h1>
+          {% endif %}
+          <div class="wst-hero__body-block">
+            {% if section.settings.body_text != blank %}
+              <p class="wst-hero__text">{{ section.settings.body_text }}</p>
+            {% endif %}
+
+            <div class="wst-hero__buttons">
+              {% if section.settings.primary_label != blank and section.settings.primary_link != blank %}
+                <a href="{{ section.settings.primary_link }}" class="wst-btn--hero wst-btn--hero-main ">
+                  {{ section.settings.primary_label }}
+                </a>
+              {% endif %}
+
+              {% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}
+                <a href="{{ section.settings.secondary_link }}" class="wst-btn--hero wst-btn--hero-secondary ">
+                  {{ section.settings.secondary_label }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.wst-hero {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  padding: 112px 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden; /* if anything bleeds outside */
+}
+
+.is-homepage .wst-hero {
+  margin-top: -88px; 
+}
+
+div.wst-hero__overlay {
+  display: block !important;
+}
+
+
+.wst-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      180deg,
+      #000 0%,
+      rgba(0, 0, 0, 0) 16.91%
+    ),
+    rgba(0, 0, 0, 0.25); 
+}
+
+
+.wst-hero__container {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+   display: flex;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.wst-hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 792.309px; /* from Figma */
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.wst-hero__shape {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 792.309 / 577.011; /
+  background: rgba(20, 20, 19, 0.30);
+  backdrop-filter: blur(11.25px);
+  -webkit-backdrop-filter: blur(11.25px); /* Safari */
+  clip-path: path("M66.2567 0H768.957C786.923 0 798.136 19.4522 789.135 35.0069L497.844 538.083C483.893 562.182 458.168 577.011 430.324 577.011H66.2567C29.6581 577.011 0 547.353 0 510.754V66.2567C0 29.6581 29.6581 0 66.2567 0Z");
+  
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 40px; 
+  box-sizing: border-box;
+}
+
+.wst-hero__content {
+  display: flex;
+  width: 615px;
+  height: 493px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #fff;
+}                                                          
+
+.wst-hero__heading {
+  color:  #FBFAEE;
+  font-family: "WST Pockets";
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 81.6px */
+  letter-spacing: -0.68px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.wst-hero__body-block {
+  display: flex;
+  width: 439px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.wst-hero__text {
+  color:  #FBFAEE;
+  /* Text/Medium/Normal */
+  font-family: "NB International Pro";
+  font-size: var(--Text-Sizes-Text-Medium, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  margin: 0;
+}
+
+.wst-hero__buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.wst-btn--hero {
+  font-family: "NB International Pro";
+  display: inline-flex;
+  padding: 1rem 2.4rem; /* 10px 24px */
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem; /* 8px */
+  font-size: 1.6rem;
+  border-radius: 0.6rem; /* 6px */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.wst-btn--hero-main  {
+  background: #FBFAEE;
+  color: #000;
+}
+
+.wst-btn--hero-secondary {
+  background: transparent;
+  color: #FBFAEE;
+  border-color: ##FBFAEE;
+  border-radius: 6px;
+  border: 1px solid  #FBFAEE;
+}
+
+.wst-btn--hero,
+.wst-btn--hero:hover,
+.wst-btn--hero:focus,
+.wst-btn--hero:active {
+  text-decoration: none;
+}
+
+/* ************** */
+/* Media Queries */
+/* ************** */
+@media (max-width: 1616px) {
+  .wst-hero__container {
+    padding-left: 16px;
+    box-sizing: border-box; /* keeps layout predictable */
+  }
+}
+
+@media (max-width: 1024px) {
+  .wst-hero__inner {
+    max-width: 792.309px;  /* keeps your desktop size limit */
+    width: 100%;           /* allows shrinking below 792px */
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .wsr-hero {
+    padding: 70px 0;
+  }
+  .wst-hero__content {
+    width: 100%;            /* allow it to shrink */
+    max-width: 615px;       /* but don't grow beyond Figma width */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* center text inside */
+    height: auto;           /* let content grow naturally */
+    justify-content: flex-start; /* no huge vertical gaps on mobile */
+    gap: 24px;              /* make spacing natural vertically */
+  }
+
+  .wst-hero__heading {
+    font-size: 48px;
+  }
+
+  /* center paragraph + button block too */
+  .wst-hero__body-block {
+    width: 100%;
+    max-width: 439px;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* center the buttons row */
+  .wst-hero__buttons {
+    justify-content: center;
+  }
+}
+
+
+  @media (max-width: 449px) {
+  .wst-hero__inner {
+    width: 100%;
+    max-width: 400px; /* was effectively 335px before */
+    justify-content: center;
+  }
+  .wst-hero__heading {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 400px) {
+  .wst-hero {
+    min-height: 592px;
+    padding: 130px 0 112px 0;
+  }
+
+   .wst-hero__shape {
+    aspect-ratio: 335 / 370.833;
+    clip-path: path("M28.0143 0H325.127C332.723 0 337.464 9.15528 333.658 16.4762L210.496 352.511C204.597 363.853 193.72 370.833 181.947 370.833H28.0143C12.5399 370.833 0 356.874 0 339.649V31.1841C0 13.9588 12.5399 0 28.0143 0Z");
+   
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    padding: 27px 18px; 
+  }
+
+
+
+  .wst-hero__heading {
+    color: var(--Color-WST-WHITE, #FBFAEE);
+    font-size: 30px;
+    line-height: 120%; /* 36px */
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+  }
+  .wst-hero__text {
+    color:  #FBFAEE;
+    font-size: 12px;
+    line-height: 150%; /* 18px */
+    text-align
+  }
+
+  .wst-hero__content {
+    display: flex;
+    width: 265px;
+    height: 317px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;    
+    align-items: flex-start;
+  }
+
+  .wst-btn--hero {
+    font-size: var(--Text-Sizes-Text-Regular, 12px);
+    line-height: 150%; /* 18px */
+  }
+
+  .wst-hero__body-block {
+    width: 100%;
+    max-width: 210px;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+
+
+</style>
+
+{% schema %}
+{
+  "name": "WST Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Hero heading"
+    },
+    {
+      "type": "textarea",
+      "id": "body_text",
+      "label": "Paragraph",
+      "default": "This is your hero paragraph text."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary CTA label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary CTA link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary CTA label",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary CTA link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "WST Hero"
+    }
+  ]
+}
+{% endschema %}

@@ -165,7 +165,7 @@
 
         <div class="wst-footer__newsletter-text">
           <p class="wst-text-regular">
-            Join our newsletter to stay up to date on features and releases.
+            {{ section.settings.newsletter_text }}
           </p>
         </div>
 
@@ -184,7 +184,7 @@
 
           <div class="wst-footer__form-text">
             <p>
-              By subscribing you agree to our Privacy Policy and provide consent to receive updates from our company.
+              {{ section.settings.newsletter_disclaimer }}
             </p>
           </div>
         </div>
@@ -377,7 +377,20 @@
 {
   "name": "WST Footer",
   "class": "section-wst-footer",
-  "settings": [],
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "newsletter_text",
+      "label": "Newsletter text",
+      "default": "Join our newsletter to stay up to date on features and releases."
+    },
+    {
+      "type": "textarea",
+      "id": "newsletter_disclaimer",
+      "label": "Newsletter disclaimer",
+      "default": "By subscribing you agree to our Privacy Policy and provide consent to receive updates from our company."
+    }
+  ],
   "blocks": []
 }
 {% endschema %}
